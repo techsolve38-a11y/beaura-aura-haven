@@ -63,6 +63,21 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				}
 			},
+			fontFamily: {
+				'display': ['Playfair Display', 'serif'],
+				'body': ['Montserrat', 'sans-serif'],
+				'sans': ['Montserrat', 'sans-serif'],
+			},
+			backgroundImage: {
+				'gradient-luxury': 'var(--gradient-primary)',
+				'gradient-elegant': 'var(--gradient-elegant)',
+				'gradient-forest': 'var(--gradient-forest)',
+			},
+			boxShadow: {
+				'luxury': 'var(--shadow-luxury)',
+				'elegant': 'var(--shadow-elegant)',
+				'glow': 'var(--shadow-glow)',
+			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
