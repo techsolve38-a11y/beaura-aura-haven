@@ -41,7 +41,7 @@ const JournalSection = () => {
             The Aura Journal
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Immerse yourself in stories of inspiration, beauty, and intentional living. Our journal celebrates the art of luxury lifestyle and the women who embody it.
+            Immerse yourself in stories of inspiration, beauty, and intentional living. Our journal celebrates the art of luxury lifestyle and those who embody it.
           </p>
         </div>
 
@@ -85,50 +85,6 @@ const JournalSection = () => {
           </div>
         </div>
 
-        {/* Article Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {articles.map((article, index) => (
-            <article
-              key={article.id}
-              className="card-luxury overflow-hidden hover-lift group cursor-pointer animate-fade-in-up"
-              style={{ animationDelay: `${index * 0.2}s` }}
-            >
-              <div className="relative overflow-hidden">
-                <img
-                  src={article.image}
-                  alt={article.title}
-                  className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-2 py-1 rounded text-xs font-medium text-foreground">
-                  {article.category}
-                </div>
-              </div>
-              
-              <div className="p-6">
-                <div className="flex items-center gap-3 text-xs text-muted-foreground mb-3">
-                  <span className="flex items-center gap-1">
-                    <Clock className="w-3 h-3" />
-                    {article.readTime}
-                  </span>
-                  <span>{article.date}</span>
-                </div>
-                
-                <h3 className="text-display text-lg font-semibold mb-3 text-foreground line-clamp-2">
-                  {article.title}
-                </h3>
-                
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4 line-clamp-3">
-                  {article.excerpt}
-                </p>
-                
-                <div className="flex items-center text-primary font-medium text-sm group-hover:gap-2 transition-all">
-                  Read More
-                  <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                </div>
-              </div>
-            </article>
-          ))}
-        </div>
 
         {/* CTA */}
         <div className="text-center">

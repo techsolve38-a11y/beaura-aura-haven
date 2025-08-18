@@ -2,9 +2,7 @@ import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const WhatsAppFloat = () => {
-  const phoneNumber = "1234567890"; // Replace with actual BEAURA phone number
-  const message = "Hello BEAURA, I have an inquiry.";
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  const whatsappUrl = "https://wa.me/254742406847?text=Hello%20BEAURA%2C%20I%20have%20an%20inquiry.";
 
   return (
     <div className="fixed bottom-6 right-6 z-50">

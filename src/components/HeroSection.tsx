@@ -24,7 +24,7 @@ const HeroSection = () => {
 
           {/* Tagline */}
           <p className="text-xl md:text-2xl font-light mb-12 tracking-wide font-body max-w-2xl mx-auto leading-relaxed">
-            Inspired by Her, Created for You
+            Inspired by Excellence, Created for You
           </p>
 
           {/* Description */}

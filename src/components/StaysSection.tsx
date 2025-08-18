@@ -5,33 +5,14 @@ const StaysSection = () => {
   const properties = [
     {
       id: 1,
-      name: "The Aura Retreat",
-      location: "Santorini, Greece",
-      description: "A cliff-side sanctuary with breathtaking sunset views and minimalist luxury design.",
+      name: "BEAURA Kilifi Retreat",
+      location: "Kilifi, Kenya",
+      description: "Welcome to Kilifi! Long term rates are negotiable.",
       image: "/api/placeholder/600/400",
       rating: 4.9,
-      price: "$450/night",
-      amenities: ["Private Pool", "Ocean View", "Spa Services"]
-    },
-    {
-      id: 2,
-      name: "Forest Whispers Lodge",
-      location: "Swiss Alps, Switzerland",
-      description: "An intimate mountain escape surrounded by pristine nature and alpine elegance.",
-      image: "/api/placeholder/600/400",
-      rating: 4.8,
-      price: "$380/night",
-      amenities: ["Mountain View", "Fireplace", "Hiking Trails"]
-    },
-    {
-      id: 3,
-      name: "Golden Sands Villa",
-      location: "Tulum, Mexico",
-      description: "Beachfront luxury with bohemian charm and sustainable design principles.",
-      image: "/api/placeholder/600/400",
-      rating: 4.9,
-      price: "$520/night",
-      amenities: ["Beach Access", "Yoga Deck", "Organic Garden"]
+      price: "Contact for rates",
+      amenities: ["📌 5 minutes walk to the beach", "📌 Ample parking", "📌 Tight security", "📌 Toiletries provided", "📌 Free WiFi", "📌 Close proximity to town, Pwani University, and all government offices/institutions"],
+      mapsLink: "https://g.co/kgs/Mg3JZA9"
     }
   ];
 
@@ -49,7 +30,7 @@ const StaysSection = () => {
         </div>
 
         {/* Properties Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 gap-8 mb-12">
           {properties.map((property, index) => (
             <div
               key={property.id}
@@ -97,9 +78,18 @@ const StaysSection = () => {
                   <span className="text-display text-xl font-semibold text-primary">
                     {property.price}
                   </span>
-                  <Button variant="elegant" size="sm">
-                    Book Now
-                  </Button>
+                  <div className="flex gap-2">
+                    {property.mapsLink && (
+                      <Button variant="outline" size="sm" asChild>
+                        <a href={property.mapsLink} target="_blank" rel="noopener noreferrer">
+                          View Location
+                        </a>
+                      </Button>
+                    )}
+                    <Button variant="elegant" size="sm">
+                      Contact Us
+                    </Button>
+                  </div>
                 </div>
               </div>
             </div>

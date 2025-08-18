@@ -9,7 +9,7 @@ const AboutSection = () => {
           
           <div className="space-y-8 text-lg md:text-xl leading-relaxed text-muted-foreground">
             <p className="animate-fade-in-up">
-              BEAURA was born from a vision of elegance, inspired by the timeless grace and sophistication of Beatrice—a woman who embodied the perfect balance of strength and beauty, adventure and refinement.
+              BEAURA was born from a vision of elegance, inspired by the timeless grace and sophistication of Beatrice—a person who embodied the perfect balance of strength and beauty, adventure and refinement.
             </p>
             
             <p className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
@@ -22,7 +22,7 @@ const AboutSection = () => {
             
             <div className="mt-12 p-8 card-elegant animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
               <blockquote className="text-2xl md:text-3xl text-display font-medium text-center italic text-foreground">
-                "Every piece, every stay, every moment is crafted with intention—to celebrate the woman who knows her worth and seeks beauty in all its forms."
+                "Every piece, every stay, every moment is crafted with intention—to celebrate those who know their worth and seek beauty in all its forms."
               </blockquote>
               <p className="mt-4 text-center text-muted-foreground font-medium">— The BEAURA Philosophy</p>
             </div>

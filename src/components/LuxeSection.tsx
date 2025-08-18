@@ -9,26 +9,50 @@ const LuxeSection = () => {
     {
       id: 1,
       name: "Jewelry",
-      description: "Handcrafted pieces that celebrate feminine strength and elegance",
+      description: "Handcrafted pieces that tell your story",
       image: jewelryImage,
       featured: "Gold Aura Collection",
       items: "50+ Pieces"
     },
     {
       id: 2,
-      name: "Perfume",
-      description: "Signature scents that capture the essence of luxury and sophistication",
+      name: "Perfumes & Fragrances",
+      description: "Signature scents that capture the essence of luxury",
       image: perfumeImage,
       featured: "Beatrice Signature",
       items: "12 Fragrances"
     },
     {
       id: 3,
-      name: "Home",
-      description: "Curated décor pieces that transform spaces into sanctuaries",
+      name: "Bags",
+      description: "Luxury accessories for every occasion",
+      image: homeDecorImage,
+      featured: "Elegance Collection",
+      items: "25+ Styles"
+    },
+    {
+      id: 4,
+      name: "Women's Wear",
+      description: "Sophisticated fashion for the modern woman",
+      image: jewelryImage,
+      featured: "Grace Collection",
+      items: "40+ Pieces"
+    },
+    {
+      id: 5,
+      name: "Accessories",
+      description: "Perfect finishing touches for any look",
+      image: perfumeImage,
+      featured: "Aura Line",
+      items: "30+ Items"
+    },
+    {
+      id: 6,
+      name: "Home Essentials",
+      description: "Curated pieces that transform spaces into sanctuaries",
       image: homeDecorImage,
       featured: "Aura Living Collection",
-      items: "100+ Items"
+      items: "60+ Items"
     }
   ];
 
@@ -96,7 +120,7 @@ const LuxeSection = () => {
             The Beatrice Collection
           </h3>
           <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-            Our signature collection featuring the finest jewelry, most coveted fragrances, and most elegant home pieces. Limited edition items crafted exclusively for the BEAURA woman.
+            Our signature collection featuring the finest jewelry, most coveted fragrances, and most elegant pieces. Limited edition items crafted exclusively for the discerning BEAURA customer.
           </p>
           <Button variant="luxury" size="lg" className="group">
             Explore Collection
