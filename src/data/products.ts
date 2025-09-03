@@ -1,0 +1,92 @@
+import { Product } from "@/types/product";
+
+export const products: Product[] = [
+  // Jewelry
+  {
+    id: 1,
+    name: "Speckled Stone Pendant",
+    price: 89,
+    description: "Elegant natural stone pendant with delicate speckled pattern",
+    image: "/lovable-uploads/aa35aec0-8e07-40bd-8028-23094342be85.png",
+    category: "Jewelry",
+    availability: "In Stock",
+    featured: true,
+  },
+  {
+    id: 2,
+    name: "Diamond Pendant Necklace",
+    price: 125,
+    description: "Sophisticated geometric diamond pendant in gold setting",
+    image: "/lovable-uploads/e15a660b-9433-4cf2-bc24-4292c04d70bd.png",
+    category: "Jewelry",
+    availability: "Limited Edition",
+  },
+  {
+    id: 3,
+    name: "Gold Rings Collection",
+    price: 95,
+    description: "Curated set of textured gold rings with intricate patterns",
+    image: "/lovable-uploads/e43e7fda-a602-462f-844e-d4060f2193f5.png",
+    category: "Jewelry",
+    availability: "In Stock",
+  },
+  {
+    id: 4,
+    name: "Cuban Chain Bracelet",
+    price: 155,
+    description: "Classic 18k gold-plated Cuban link bracelet",
+    image: "/lovable-uploads/bec8c553-6bf9-43c3-95ca-01215f023b75.png",
+    category: "Jewelry",
+    availability: "In Stock",
+    featured: true,
+  },
+  {
+    id: 5,
+    name: "Twisted Hoop Earrings",
+    price: 75,
+    description: "Modern twisted gold hoops with elegant curves",
+    image: "/lovable-uploads/0ebd2964-ad01-4c43-87e3-764908d6346b.png",
+    category: "Jewelry",
+    availability: "In Stock",
+  },
+  {
+    id: 6,
+    name: "Abstract Drop Earrings",
+    price: 85,
+    description: "Sculptural gold earrings with contemporary abstract design",
+    image: "/lovable-uploads/d50244ab-4743-4411-a2c7-1a52dc0b83e3.png",
+    category: "Jewelry",
+    availability: "Limited Edition",
+  },
+  {
+    id: 7,
+    name: "Textured Statement Earrings",
+    price: 110,
+    description: "Bold geometric earrings with rich textured finish",
+    image: "/lovable-uploads/1eadfdb3-cc62-4a8f-8e48-11c7c083d03d.png",
+    category: "Jewelry",
+    availability: "In Stock",
+  },
+  {
+    id: 8,
+    name: "Chunky Chain Necklace",
+    price: 185,
+    description: "Statement gold chain necklace with luxurious weight",
+    image: "/lovable-uploads/cb61e483-a9d2-45ab-a944-1f179cf93641.png",
+    category: "Jewelry",
+    availability: "In Stock",
+    featured: true,
+  },
+  
+  // Perfumes & Fragrances
+  {
+    id: 9,
+    name: "My Way Eau de Parfum",
+    price: 95,
+    description: "Signature fragrance with notes of bergamot and white florals",
+    image: "/lovable-uploads/b939e808-d4e1-4914-9be6-d178801c3fbb.png",
+    category: "Perfumes & Fragrances",
+    availability: "In Stock",
+    featured: true,
+  }
+];

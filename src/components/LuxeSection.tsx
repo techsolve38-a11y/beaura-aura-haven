@@ -123,8 +123,10 @@ const LuxeSection = () => {
             Our signature collection featuring the finest jewelry, most coveted fragrances, and most elegant pieces. Limited edition items crafted exclusively for the discerning BEAURA customer.
           </p>
           <Button variant="luxury" size="lg" className="group">
-            Explore Collection
-            <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+            <a href="/products" className="flex items-center">
+              Explore Collection
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+            </a>
           </Button>
         </div>
       </div>
