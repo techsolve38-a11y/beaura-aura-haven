@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Instagram, Facebook, Twitter } from "lucide-react";
+import { MapPin, Phone, Mail, Instagram, Facebook, Twitter, Star } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -48,7 +48,10 @@ const Footer = () => {
               <li><a href="#about" className="text-background/80 hover:text-primary transition-colors">About BEAURA</a></li>
               <li><a href="#stays" className="text-background/80 hover:text-primary transition-colors">BEAURA Stays</a></li>
               <li><a href="#luxe" className="text-background/80 hover:text-primary transition-colors">BEAURA Luxe</a></li>
-              <li><a href="#journal" className="text-background/80 hover:text-primary transition-colors">The Aura Journal</a></li>
+              <li><a href="https://www.google.com/search?q=BEAURA+reviews" target="_blank" rel="noopener noreferrer" className="text-background/80 hover:text-primary transition-colors flex items-center gap-1">
+                <Star className="w-4 h-4" />
+                Google Reviews
+              </a></li>
               <li><a href="#" className="text-background/80 hover:text-primary transition-colors">Gift Cards</a></li>
             </ul>
           </div>
