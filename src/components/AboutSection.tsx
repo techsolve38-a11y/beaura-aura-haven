@@ -9,15 +9,15 @@ const AboutSection = () => {
           
           <div className="space-y-8 text-lg md:text-xl leading-relaxed text-muted-foreground">
             <p className="animate-fade-in-up">
-              BEAURA was born from a vision of elegance, inspired by the timeless grace and sophistication of Beatrice—a person who embodied the perfect balance of strength and beauty, adventure and refinement.
+              BEAURA is a lifestyle and gifting brand inspired by my Mama, Beatrice, whose selflessness, generosity and ability to make others feel special continue to guide our vision. Founded in her honor, BEAURA embodies the belief that true luxury is not just in what we own, but in how we share, give, and create lasting memories.
             </p>
             
             <p className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-              Our name reflects this duality: <span className="text-primary font-medium">"Beau"</span> representing beauty and <span className="text-secondary font-medium">"Ra"</span> symbolizing radiance. Together, they create an aura of luxury that permeates everything we do.
+              Our name reflects this beautiful duality: <span className="text-primary font-medium">"Beau"</span> representing beauty and <span className="text-secondary font-medium">"Ra"</span> symbolizing radiance. Together, they create an aura of luxury that permeates everything we do, just as Mama's spirit radiates through every aspect of our brand.
             </p>
             
             <p className="animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-              From our carefully curated retreats that offer sanctuary for the soul to our exquisite collection of jewelry, perfumes, and home décor, BEAURA is more than a brand—it's a lifestyle. We believe that true luxury lies not in excess, but in the perfect curation of experiences and objects that elevate the everyday into the extraordinary.
+              Our collections are thoughtfully curated to reflect elegance, meaning and timeless style. From our carefully curated retreats that offer sanctuary for the soul to our exquisite collection of jewelry, perfumes, and home essentials, every piece carries the essence of Mama's spirit, reminding us that the greatest gift is making others feel valued.
             </p>
             
             <div className="mt-12 p-8 card-elegant animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
