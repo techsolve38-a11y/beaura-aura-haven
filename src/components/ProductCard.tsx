@@ -2,12 +2,25 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ShoppingCart, Heart } from "lucide-react";
 import { Product } from "@/types/product";
+import { useCart } from "@/contexts/CartContext";
+import { useToast } from "@/hooks/use-toast";
 
 interface ProductCardProps {
   product: Product;
 }
 
 const ProductCard = ({ product }: ProductCardProps) => {
+  const { dispatch } = useCart();
+  const { toast } = useToast();
+
+  const handleAddToCart = () => {
+    dispatch({ type: 'ADD_TO_CART', payload: product });
+    toast({
+      title: "Added to cart",
+      description: `${product.name} has been added to your cart.`,
+    });
+  };
+
   const getAvailabilityColor = (availability: Product["availability"]) => {
     switch (availability) {
       case "In Stock":
@@ -90,10 +103,12 @@ const ProductCard = ({ product }: ProductCardProps) => {
             )}
           </div>
           <Button 
-            className="group-hover:bg-primary-glow transition-colors"
+            className="group-hover:bg-primary-glow transition-colors flex-shrink-0"
             disabled={product.availability === "Out of Stock"}
+            onClick={handleAddToCart}
+            size="sm"
           >
-            <ShoppingCart className="w-4 h-4 mr-2" />
+            <ShoppingCart className="w-4 h-4 mr-1" />
             {product.availability === "Out of Stock" ? "Sold Out" : "Add to Cart"}
           </Button>
         </div>

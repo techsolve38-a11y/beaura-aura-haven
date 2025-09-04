@@ -7,6 +7,7 @@ import ProductCard from "@/components/ProductCard";
 import { products } from "@/data/products";
 import { ProductCategory } from "@/types/product";
 import { Filter, Grid, List } from "lucide-react";
+import CartButton from "@/components/CartButton";
 
 const Products = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -52,6 +53,12 @@ const Products = () => {
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Discover our exclusive collection of luxury goods. Each piece is carefully curated for its exceptional quality and timeless elegance.
             </p>
+          </div>
+
+          {/* Header with Cart */}
+          <div className="flex items-center justify-between mb-8">
+            <div></div>
+            <CartButton />
           </div>
 
           {/* Filter Controls */}
