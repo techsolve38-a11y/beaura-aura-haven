@@ -49,11 +49,18 @@ const ProductCard = ({ product }: ProductCardProps) => {
           </Badge>
         </div>
 
-        {/* Featured Badge */}
+        {/* Featured/Sale Badge */}
         {product.featured && (
           <div className="absolute bottom-4 left-4">
             <Badge className="bg-primary text-primary-foreground">
               Featured
+            </Badge>
+          </div>
+        )}
+        {product.originalPrice && (
+          <div className="absolute bottom-4 right-4">
+            <Badge className="bg-red-500 text-white">
+              Sale
             </Badge>
           </div>
         )}
@@ -72,8 +79,15 @@ const ProductCard = ({ product }: ProductCardProps) => {
 
         {/* Price and CTA */}
         <div className="flex items-center justify-between">
-          <div className="text-2xl font-bold text-primary">
-            ${product.price}
+          <div className="flex flex-col">
+            <div className="text-2xl font-bold text-primary">
+              ${product.price}
+            </div>
+            {product.originalPrice && (
+              <div className="text-sm text-muted-foreground line-through">
+                ${product.originalPrice}
+              </div>
+            )}
           </div>
           <Button 
             className="group-hover:bg-primary-glow transition-colors"
