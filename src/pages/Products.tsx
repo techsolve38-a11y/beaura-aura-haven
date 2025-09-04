@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -8,7 +9,15 @@ import { ProductCategory } from "@/types/product";
 import { Filter, Grid, List } from "lucide-react";
 
 const Products = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
   const [selectedCategory, setSelectedCategory] = useState<ProductCategory | "All">("All");
+
+  useEffect(() => {
+    const categoryParam = searchParams.get("category");
+    if (categoryParam && categoryParam !== "All") {
+      setSelectedCategory(categoryParam as ProductCategory);
+    }
+  }, [searchParams]);
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
 
   const categories: (ProductCategory | "All")[] = [

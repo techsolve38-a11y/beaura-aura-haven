@@ -1,10 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import jewelryImage from "@/assets/jewelry-display.jpg";
 import perfumeImage from "@/assets/perfume-collection.jpg";
 import homeDecorImage from "@/assets/home-decor.jpg";
 
 const LuxeSection = () => {
+  const navigate = useNavigate();
   const categories = [
     {
       id: 1,
@@ -76,6 +78,7 @@ const LuxeSection = () => {
               key={category.id}
               className="group cursor-pointer animate-fade-in-up"
               style={{ animationDelay: `${index * 0.2}s` }}
+              onClick={() => navigate(`/products?category=${encodeURIComponent(category.name)}`)}
             >
               <div className="relative overflow-hidden rounded-lg shadow-elegant hover:shadow-luxury transition-all duration-500">
                 {/* Image */}
@@ -85,7 +88,7 @@ const LuxeSection = () => {
                     alt={category.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-80"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-90"></div>
                 </div>
 
                 {/* Content Overlay */}
