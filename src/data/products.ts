@@ -190,5 +190,47 @@ export const products: Product[] = [
     image: "/lovable-uploads/a3a87f32-1a3f-416d-9a97-2ec70fe7f511.png",
     category: "Perfumes & Fragrances",
     availability: "Limited Edition",
+  },
+
+  // Niche & Artisan Fragrances
+  {
+    id: 20,
+    name: "Mousuf Eau de Parfum",
+    price: 125,
+    originalPrice: 155,
+    description: "Luxurious oriental fragrance with rich amber and oud notes",
+    image: "/lovable-uploads/22a7d19e-4919-4ac5-a399-9e8d443e44ce.png",
+    category: "Perfumes & Fragrances",
+    availability: "In Stock",
+  },
+  {
+    id: 21,
+    name: "Maison Francis Kurkdjian Baccarat Rouge 540",
+    price: 285,
+    description: "Iconic crystal fragrance with saffron, amberwood and cedar",
+    image: "/lovable-uploads/ee87e7c5-b0a2-423b-829a-f30acfba6d20.png",
+    category: "Perfumes & Fragrances",
+    availability: "Limited Edition",
+    featured: true,
+  },
+  {
+    id: 22,
+    name: "YSL Black Opium Eau de Parfum",
+    price: 165,
+    originalPrice: 195,
+    description: "Addictive fragrance with black coffee, white florals and vanilla",
+    image: "/lovable-uploads/aee80801-dcda-4c61-b783-8bb52ca0c532.png",
+    category: "Perfumes & Fragrances",
+    availability: "In Stock",
+    featured: true,
+  },
+  {
+    id: 23,
+    name: "Lattafa KHAMRAH Collection",
+    price: 95,
+    description: "Exquisite Middle Eastern fragrance duo with crystal craftsmanship",
+    image: "/lovable-uploads/2ff76bd8-af3d-420d-9ffc-f97c55dee4c1.png",
+    category: "Perfumes & Fragrances",
+    availability: "Limited Edition",
   }
 ];
