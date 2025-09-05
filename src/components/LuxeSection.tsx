@@ -88,24 +88,24 @@ const LuxeSection = () => {
                     alt={category.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-90"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/20"></div>
                 </div>
 
                 {/* Content Overlay */}
                 <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
                   <div className="transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
                     <div className="flex items-center justify-between mb-2">
-                      <h3 className="text-display text-2xl font-bold">{category.name}</h3>
-                      <ArrowRight className="w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      <h3 className="text-display text-2xl font-bold drop-shadow-lg">{category.name}</h3>
+                      <ArrowRight className="w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 drop-shadow-lg" />
                     </div>
                     
-                    <p className="text-white/90 mb-3 leading-relaxed">
+                    <p className="text-white mb-3 leading-relaxed drop-shadow-md">
                       {category.description}
                     </p>
                     
                     <div className="flex items-center justify-between text-sm">
-                      <span className="text-primary font-medium">{category.featured}</span>
-                      <span className="text-white/70">{category.items}</span>
+                      <span className="text-primary font-medium drop-shadow-md bg-white/10 px-2 py-1 rounded-full backdrop-blur-sm">{category.featured}</span>
+                      <span className="text-white/90 drop-shadow-md">{category.items}</span>
                     </div>
                   </div>
                 </div>
