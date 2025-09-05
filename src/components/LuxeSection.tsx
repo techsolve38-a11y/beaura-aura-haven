@@ -10,7 +10,7 @@ const LuxeSection = () => {
   const categories = [
     {
       id: 1,
-      name: "Jewelry",
+      name: "Jewellery",
       description: "Handcrafted pieces that tell your story",
       image: jewelryImage,
       featured: "Gold Aura Collection",
@@ -123,7 +123,7 @@ const LuxeSection = () => {
             The Beatrice Collection
           </h3>
           <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-            Our signature collection featuring the finest jewelry, most coveted fragrances, and most elegant pieces. Limited edition items crafted exclusively for the discerning BEAURA customer.
+            Our signature collection featuring the finest jewellery, most coveted fragrances, and most elegant pieces. Limited edition items crafted exclusively for the discerning BEAURA customer.
           </p>
           <Button variant="luxury" size="lg" className="group">
             <a href="/products" className="flex items-center">
