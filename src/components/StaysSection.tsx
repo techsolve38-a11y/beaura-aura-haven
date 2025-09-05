@@ -22,7 +22,7 @@ const StaysSection = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-display text-4xl md:text-5xl font-bold mb-6 text-gradient-luxury">
-            BEAURA Stays
+            BEAURA Homes
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Discover boutique retreats that redefine luxury travel. Each property is carefully selected and curated to offer an unforgettable experience that nurtures both body and soul.

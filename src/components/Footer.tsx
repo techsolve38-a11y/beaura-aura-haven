@@ -46,7 +46,7 @@ const Footer = () => {
             <h4 className="text-display font-semibold mb-4 text-background">Quick Links</h4>
             <ul className="space-y-2">
               <li><a href="#about" className="text-background/80 hover:text-primary transition-colors">About BEAURA</a></li>
-              <li><a href="#stays" className="text-background/80 hover:text-primary transition-colors">BEAURA Stays</a></li>
+              <li><a href="#stays" className="text-background/80 hover:text-primary transition-colors">BEAURA Homes</a></li>
               <li><a href="#luxe" className="text-background/80 hover:text-primary transition-colors">BEAURA Luxe</a></li>
               <li><a href="/products" className="text-background/80 hover:text-primary transition-colors">Shop Collection</a></li>
               <li><a href="https://www.google.com/maps/place/Natna+studio+-cozy+stay+near+baobab+beach,kilifi/@-3.6257599,39.8627327,17z/data=!4m8!3m7!1s0x183fdd71c1822be7:0x7c91fcb32fcfb472!8m2!3d-3.6257653!4d39.8653076!9m1!1b1!16s%2Fg%2F11l6_9j8dg?hl=en-GB&entry=ttu&g_ep=EgoyMDI1MDgzMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="text-background/80 hover:text-primary transition-colors flex items-center gap-1">

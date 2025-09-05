@@ -63,7 +63,7 @@ const TestimonialsSection = () => {
       role: "Tanzania",
       image: "/api/placeholder/100/100",
       rating: 5,
-      text: "I am so much excited to express my feelings to be in Kilifi as my first visit and at Beaura Stays as my special home. The place is excellent for any guest, clean place, cool and exciting.",
+      text: "I am so much excited to express my feelings to be in Kilifi as my first visit and at BEAURA Homes as my special home. The place is excellent for any guest, clean place, cool and exciting.",
       category: "stays"
     },
     {
@@ -72,7 +72,7 @@ const TestimonialsSection = () => {
       role: "Guest",
       image: "/api/placeholder/100/100",
       rating: 5,
-      text: "We wish to register our appreciation for the warm welcome during our four weeks stay. The environment, service was awesome. Beaura Stays is a home away from home.",
+      text: "We wish to register our appreciation for the warm welcome during our four weeks stay. The environment, service was awesome. BEAURA Homes is a home away from home.",
       category: "stays"
     },
     {
