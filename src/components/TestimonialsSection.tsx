@@ -5,48 +5,93 @@ const TestimonialsSection = () => {
   const testimonials = [
     {
       id: 1,
-      name: "Isabella Chen",
-      role: "Travel Enthusiast",
+      name: "James 'Jemo'",
+      role: "Guest",
       image: "/api/placeholder/100/100",
       rating: 5,
-      text: "The Aura Retreat was absolutely magical. Every detail was thoughtfully curated, from the minimalist design to the breathtaking sunset views. BEAURA truly understands luxury.",
+      text: "Your hospitality made my time in Kilifi truly enjoyable and memorable. I leave with deep appreciation and memories.",
       category: "stays"
     },
     {
       id: 2,
-      name: "Sophia Martinez",
-      role: "Jewelry Collector",
+      name: "Bena",
+      role: "Guest",
       image: "/api/placeholder/100/100",
       rating: 5,
-      text: "The Gold Aura Collection is exquisite. Each piece tells a story of elegance and craftsmanship. I've never felt more beautiful than when wearing BEAURA jewelry.",
-      category: "luxe"
+      text: "This place rekindled my relationship. Very wonderful, I truly enjoyed.",
+      category: "stays"
     },
     {
       id: 3,
-      name: "Emma Thompson",
-      role: "Interior Designer",
+      name: "Jeff",
+      role: "Guest",
       image: "/api/placeholder/100/100",
       rating: 5,
-      text: "BEAURA's home collection transformed my living space into a sanctuary. The attention to detail and quality is unmatched. It's luxury that you can feel.",
-      category: "luxe"
+      text: "Ambience, serene!! The ambience is spectacular. Great host!! Will definitely visit again.",
+      category: "stays"
     },
     {
       id: 4,
-      name: "Victoria Laurent",
-      role: "Wellness Coach",
+      name: "Jarred Onyango",
+      role: "Nairobi, Kenya",
       image: "/api/placeholder/100/100",
       rating: 5,
-      text: "Forest Whispers Lodge provided the perfect escape. The connection with nature combined with luxurious amenities created an unforgettable retreat experience.",
+      text: "Hospitality at its best!!! Excellent communication, excellent room service/decoration, affordable, perfect stay, peaceful. Future referrals guaranteed and revisit.",
       category: "stays"
     },
     {
       id: 5,
-      name: "Camille Dubois",
-      role: "Fragrance Enthusiast",
+      name: "Christine Mumbua",
+      role: "Mombasa, Kenya",
       image: "/api/placeholder/100/100",
       rating: 5,
-      text: "Beatrice Signature is my signature scent now. It captures sophistication and femininity perfectly. The fragrance evolves beautifully throughout the day.",
-      category: "luxe"
+      text: "Great place to stay: modern, comfortable and close to the beach. Good communication, perfect room service, very clean and affordable. Will surely refer friends.",
+      category: "stays"
+    },
+    {
+      id: 6,
+      name: "Maulid Mubarak",
+      role: "Mombasa, Kenya",
+      image: "/api/placeholder/100/100",
+      rating: 5,
+      text: "I had a wonderful stay, perfectly situated, had everything I needed and good hospitality. I will highly recommend the studio to solo traveller or a couple.",
+      category: "stays"
+    },
+    {
+      id: 7,
+      name: "Ms. Sophie",
+      role: "Tanzania",
+      image: "/api/placeholder/100/100",
+      rating: 5,
+      text: "I am so much excited to express my feelings to be in Kilifi as my first visit and at Beaura Stays as my special home. The place is excellent for any guest, clean place, cool and exciting.",
+      category: "stays"
+    },
+    {
+      id: 8,
+      name: "Esther Family",
+      role: "Guest",
+      image: "/api/placeholder/100/100",
+      rating: 5,
+      text: "We wish to register our appreciation for the warm welcome during our four weeks stay. The environment, service was awesome. Beaura Stays is a home away from home.",
+      category: "stays"
+    },
+    {
+      id: 9,
+      name: "Rachel Kish",
+      role: "Guest",
+      image: "/api/placeholder/100/100",
+      rating: 5,
+      text: "Awesome experience. Loved the communication, the clean space, the customer care. Highly recommend.",
+      category: "stays"
+    },
+    {
+      id: 10,
+      name: "Kevin",
+      role: "Guest",
+      image: "/api/placeholder/100/100",
+      rating: 5,
+      text: "Great host. Awesome experience staying here. Place is neat, well organised, and host was friendly and constantly communicating. Will visit again!!!",
+      category: "stays"
     }
   ];
 
