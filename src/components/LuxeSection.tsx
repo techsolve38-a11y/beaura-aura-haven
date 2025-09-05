@@ -95,7 +95,7 @@ const LuxeSection = () => {
                 <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
                   <div className="transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
                     <div className="flex items-center justify-between mb-2">
-                      <h3 className="text-display text-2xl font-bold drop-shadow-lg">{category.name}</h3>
+                      <h3 className="text-display text-2xl font-bold drop-shadow-lg text-gray-100">{category.name}</h3>
                       <ArrowRight className="w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 drop-shadow-lg" />
                     </div>
                     
