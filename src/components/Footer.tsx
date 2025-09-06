@@ -1,4 +1,5 @@
 import { MapPin, Phone, Mail, Instagram, Facebook, Twitter, Star } from "lucide-react";
+import ContactForm from "./ContactForm";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -61,7 +62,15 @@ const Footer = () => {
           <div>
             <h4 className="text-display font-semibold mb-4 text-background">Support</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="text-background/80 hover:text-primary transition-colors">Contact Us</a></li>
+              <li>
+                <ContactForm 
+                  trigger={
+                    <button className="text-background/80 hover:text-primary transition-colors text-left">
+                      Contact Us
+                    </button>
+                  } 
+                />
+              </li>
               <li><a href="#" className="text-background/80 hover:text-primary transition-colors">Booking Help</a></li>
               <li><a href="#" className="text-background/80 hover:text-primary transition-colors">Size Guide</a></li>
               <li><a href="#" className="text-background/80 hover:text-primary transition-colors">Shipping Info</a></li>

@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { MapPin, Calendar, Star } from "lucide-react";
+import ContactForm from "./ContactForm";
 
 const StaysSection = () => {
   const properties = [
@@ -86,9 +87,13 @@ const StaysSection = () => {
                         </a>
                       </Button>
                     )}
-                    <Button variant="elegant" size="sm">
-                      Contact Us
-                    </Button>
+                    <ContactForm 
+                      trigger={
+                        <Button variant="elegant" size="sm">
+                          Contact Us
+                        </Button>
+                      } 
+                    />
                   </div>
                 </div>
               </div>
