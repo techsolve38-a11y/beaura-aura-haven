@@ -76,9 +76,7 @@ const Footer = () => {
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                 <div className="text-background/80">
-                  <p>123 Luxury Lane</p>
-                  <p>Elegance District</p>
-                  <p>New York, NY 10001</p>
+                  <p>Kilfi Town, Kilifi County - Kenya</p>
                 </div>
               </div>
               <div className="flex items-center gap-3">
