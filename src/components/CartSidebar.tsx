@@ -17,6 +17,25 @@ const CartSidebar = () => {
     dispatch({ type: 'REMOVE_FROM_CART', payload: id });
   };
 
+  const handleWhatsAppCheckout = () => {
+    const phoneNumber = "254742406847"; // Remove + and country code formatting
+    
+    let message = "Hello! I'd like to place an order:\n\n";
+    
+    state.items.forEach((item, index) => {
+      message += `${index + 1}. ${item.product.name}\n`;
+      message += `   Quantity: ${item.quantity}\n`;
+      message += `   Price: $${item.product.price} each\n`;
+      message += `   Subtotal: $${(item.product.price * item.quantity).toFixed(2)}\n\n`;
+    });
+    
+    message += `*Total Amount: $${totalPrice.toFixed(2)}*\n\n`;
+    message += "Please confirm the order and let me know the delivery details. Thank you!";
+    
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
     <Sheet open={state.isOpen} onOpenChange={(open) => dispatch({ type: open ? 'OPEN_CART' : 'CLOSE_CART' })}>
       <SheetContent className="w-full sm:max-w-lg">
@@ -106,8 +125,8 @@ const CartSidebar = () => {
               </div>
               
               <div className="space-y-2">
-                <Button className="w-full" size="lg">
-                  Checkout
+                <Button className="w-full" size="lg" onClick={handleWhatsAppCheckout}>
+                  Checkout via WhatsApp
                 </Button>
                 <Button 
                   variant="outline" 
