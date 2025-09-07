@@ -75,13 +75,13 @@ const StaysSection = () => {
                   ))}
                 </div>
                 
-                <div className="flex items-center justify-between">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                   <span className="text-display text-xl font-semibold text-primary">
                     {property.price}
                   </span>
-                  <div className="flex gap-2">
+                  <div className="flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
                     {property.mapsLink && (
-                      <Button variant="outline" size="sm" asChild>
+                      <Button variant="outline" size="sm" asChild className="w-full sm:w-auto">
                         <a href={property.mapsLink} target="_blank" rel="noopener noreferrer">
                           View Location
                         </a>
@@ -89,7 +89,7 @@ const StaysSection = () => {
                     )}
                     <ContactForm 
                       trigger={
-                        <Button variant="elegant" size="sm">
+                        <Button variant="elegant" size="sm" className="w-full sm:w-auto">
                           Contact Us
                         </Button>
                       } 

@@ -18,26 +18,26 @@ const HeroSection = () => {
       <div className="relative z-10 text-center text-white container-luxury">
         <div className="max-w-4xl mx-auto animate-fade-in-up">
           {/* Logo/Brand Name */}
-          <h1 className="text-display text-6xl md:text-8xl font-bold mb-6 tracking-wider">
+          <h1 className="text-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-4 sm:mb-6 tracking-wider px-4">
             BEAURA
           </h1>
 
           {/* Tagline */}
-          <p className="text-xl md:text-2xl font-light mb-12 tracking-wide font-body max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl font-light mb-8 sm:mb-12 tracking-wide font-body max-w-2xl mx-auto leading-relaxed px-4">
             Inspired by Excellence, Created for You
           </p>
 
           {/* Description */}
-          <p className="text-lg md:text-xl font-light mb-12 text-white/90 max-w-3xl mx-auto font-body">
+          <p className="text-base sm:text-lg md:text-xl font-light mb-8 sm:mb-12 text-white/90 max-w-3xl mx-auto font-body px-4">
             Discover a world where luxury meets authenticity. From boutique retreats that inspire wanderlust to curated collections that elevate everyday moments.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center px-4">
             <Button
               variant="hero"
               size="xl"
-              className="min-w-48"
+              className="w-full sm:w-auto sm:min-w-48"
               onClick={() => document.getElementById('stays')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Explore Stays
@@ -45,7 +45,7 @@ const HeroSection = () => {
             <Button
               variant="ghost_luxury"
               size="xl"
-              className="min-w-48 text-white border-white hover:bg-white hover:text-primary"
+              className="w-full sm:w-auto sm:min-w-48 text-white border-white hover:bg-white hover:text-primary"
               onClick={() => document.getElementById('luxe')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Shop Luxe

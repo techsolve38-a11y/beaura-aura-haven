@@ -62,19 +62,20 @@ const Products = () => {
           </div>
 
           {/* Filter Controls */}
-          <div className="flex flex-col lg:flex-row gap-6 mb-12">
+          <div className="flex flex-col gap-4 mb-8 sm:mb-12">
             {/* Category Filter */}
-            <div className="flex-1">
+            <div className="w-full overflow-x-auto">
               <Tabs value={selectedCategory} onValueChange={(value) => setSelectedCategory(value as ProductCategory | "All")}>
-                <TabsList className="grid grid-cols-3 lg:grid-cols-7 w-full">
+                <TabsList className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 w-full min-w-max">
                   {categories.map((category) => (
                     <TabsTrigger 
                       key={category} 
                       value={category}
-                      className="text-xs lg:text-sm"
+                      className="text-xs sm:text-sm whitespace-nowrap"
                     >
-                      {category}
-                      <Badge variant="secondary" className="ml-1 lg:ml-2 text-xs">
+                      <span className="hidden sm:inline">{category}</span>
+                      <span className="sm:hidden">{category.length > 8 ? category.substring(0, 8) + "..." : category}</span>
+                      <Badge variant="secondary" className="ml-1 sm:ml-2 text-xs hidden sm:inline-flex">
                         {categoryCount(category)}
                       </Badge>
                     </TabsTrigger>
@@ -84,7 +85,7 @@ const Products = () => {
             </div>
 
             {/* View Toggle */}
-            <div className="flex gap-2">
+            <div className="flex gap-2 justify-center sm:justify-end">
               <Button
                 variant={viewMode === "grid" ? "default" : "outline"}
                 size="icon"
@@ -104,9 +105,9 @@ const Products = () => {
 
           {/* Products Grid */}
           {filteredProducts.length > 0 ? (
-            <div className={`grid gap-8 ${
+            <div className={`grid gap-4 sm:gap-6 lg:gap-8 ${
               viewMode === "grid" 
-                ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" 
+                ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" 
                 : "grid-cols-1 lg:grid-cols-2"
             }`}>
               {filteredProducts.map((product) => (
@@ -137,7 +138,7 @@ const Products = () => {
                 <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
                   Hand-picked pieces from our most coveted collections, featuring exceptional craftsmanship and timeless design.
                 </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 mt-8">
                   {products.filter(p => p.featured).map((product) => (
                     <ProductCard key={product.id} product={product} />
                   ))}

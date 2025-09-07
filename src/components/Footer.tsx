@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className="bg-foreground text-background">
       <div className="container-luxury">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 py-8 sm:py-16">
           {/* Brand Section */}
           <div className="lg:col-span-1">
             <h3 className="text-display text-2xl font-bold mb-4 text-primary">
@@ -105,12 +105,12 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-background/20 py-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-background/60 text-sm">
+        <div className="border-t border-background/20 py-6 sm:py-8">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p className="text-background/60 text-sm text-center sm:text-left">
               © {currentYear} BEAURA. All rights reserved.
             </p>
-            <div className="flex gap-6 text-sm">
+            <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-sm">
               <a href="#" className="text-background/60 hover:text-primary transition-colors">
                 Privacy Policy
               </a>

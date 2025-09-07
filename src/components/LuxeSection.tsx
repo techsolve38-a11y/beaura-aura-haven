@@ -72,7 +72,7 @@ const LuxeSection = () => {
         </div>
 
         {/* Categories Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
           {categories.map((category, index) => (
             <div
               key={category.id}
@@ -82,7 +82,7 @@ const LuxeSection = () => {
             >
               <div className="relative overflow-hidden rounded-lg shadow-elegant hover:shadow-luxury transition-all duration-500">
                 {/* Image */}
-                <div className="relative h-80 overflow-hidden">
+                <div className="relative h-64 sm:h-80 overflow-hidden">
                   <img
                     src={category.image}
                     alt={category.name}
@@ -92,19 +92,19 @@ const LuxeSection = () => {
                 </div>
 
                 {/* Content Overlay */}
-                <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
+                <div className="absolute inset-0 flex flex-col justify-end p-4 sm:p-6 text-white">
                   <div className="transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
                     <div className="flex items-center justify-between mb-2">
-                      <h3 className="text-display text-2xl font-bold drop-shadow-lg text-gray-100">{category.name}</h3>
-                      <ArrowRight className="w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 drop-shadow-lg" />
+                      <h3 className="text-display text-xl sm:text-2xl font-bold drop-shadow-lg text-gray-100">{category.name}</h3>
+                      <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 drop-shadow-lg" />
                     </div>
                     
-                    <p className="text-white mb-3 leading-relaxed drop-shadow-md">
+                    <p className="text-white mb-3 text-sm sm:text-base leading-relaxed drop-shadow-md">
                       {category.description}
                     </p>
                     
-                    <div className="flex items-center justify-between text-sm">
-                      <span className="text-primary font-medium drop-shadow-md bg-white/10 px-2 py-1 rounded-full backdrop-blur-sm">{category.featured}</span>
+                    <div className="flex items-center justify-between text-xs sm:text-sm">
+                      <span className="text-primary font-medium drop-shadow-md bg-white/10 px-2 py-1 rounded-full backdrop-blur-sm text-xs sm:text-sm">{category.featured}</span>
                       <span className="text-white/90 drop-shadow-md">{category.items}</span>
                     </div>
                   </div>
