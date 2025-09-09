@@ -25,11 +25,11 @@ const CartSidebar = () => {
     state.items.forEach((item, index) => {
       message += `${index + 1}. ${item.product.name}\n`;
       message += `   Quantity: ${item.quantity}\n`;
-      message += `   Price: $${item.product.price} each\n`;
-      message += `   Subtotal: $${(item.product.price * item.quantity).toFixed(2)}\n\n`;
+      message += `   Price: KSh ${item.product.price} each\n`;
+      message += `   Subtotal: KSh ${(item.product.price * item.quantity).toFixed(2)}\n\n`;
     });
     
-    message += `*Total Amount: $${totalPrice.toFixed(2)}*\n\n`;
+    message += `*Total Amount: KSh ${totalPrice.toFixed(2)}*\n\n`;
     message += "Please confirm the order and let me know the delivery details. Thank you!";
     
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
@@ -83,10 +83,10 @@ const CartSidebar = () => {
                       
                       <div className="flex items-center justify-between">
                         <div className="text-sm font-medium">
-                          ${item.product.price}
+                          KSh {item.product.price}
                           {item.product.originalPrice && (
                             <span className="text-xs text-muted-foreground line-through ml-2">
-                              ${item.product.originalPrice}
+                              KSh {item.product.originalPrice}
                             </span>
                           )}
                         </div>
@@ -121,7 +121,7 @@ const CartSidebar = () => {
             <div className="border-t pt-4 space-y-4">
               <div className="flex items-center justify-between text-lg font-semibold">
                 <span>Total</span>
-                <span>${totalPrice.toFixed(2)}</span>
+                <span>KSh {totalPrice.toFixed(2)}</span>
               </div>
               
               <div className="space-y-2">
