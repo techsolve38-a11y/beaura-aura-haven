@@ -1,41 +1,58 @@
 import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
+import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import ProductCard from "@/components/ProductCard";
-import { products } from "@/data/products";
-import { ProductCategory } from "@/types/product";
-import { Filter, Grid, List } from "lucide-react";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
+import { Grid, List } from "lucide-react";
 import CartButton from "@/components/CartButton";
+import { toast } from "sonner";
 
 const Products = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const [selectedCategory, setSelectedCategory] = useState<ProductCategory | "All">("All");
+  const [selectedCategory, setSelectedCategory] = useState<string>("All");
+  const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
+  const [products, setProducts] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const categoryParam = searchParams.get("category");
     if (categoryParam && categoryParam !== "All") {
-      setSelectedCategory(categoryParam as ProductCategory);
+      setSelectedCategory(categoryParam);
     }
   }, [searchParams]);
-  const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
 
-  const categories: (ProductCategory | "All")[] = [
-    "All",
-    "Jewelry",
-    "Perfumes & Fragrances",
-    "Bags",
-    "Women's Wear",
-    "Accessories",
-    "Home Essentials"
-  ];
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+
+  const fetchProducts = async () => {
+    try {
+      const { data, error } = await supabase
+        .from('products')
+        .select('*')
+        .order('created_at', { ascending: false });
+
+      if (error) throw error;
+      setProducts(data || []);
+    } catch (error) {
+      toast.error("Failed to load products");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const categories = ["All", ...Array.from(new Set(products.map(p => p.category)))];
 
   const filteredProducts = selectedCategory === "All" 
     ? products 
     : products.filter(product => product.category === selectedCategory);
 
-  const categoryCount = (category: ProductCategory | "All") => {
+  const categoryCount = (category: string) => {
     return category === "All" 
       ? products.length 
       : products.filter(p => p.category === category).length;
@@ -43,8 +60,10 @@ const Products = () => {
 
   return (
     <div className="min-h-screen bg-gradient-elegant">
+      <Navbar />
+      
       {/* Header */}
-      <section className="section-padding">
+      <section className="section-padding pt-24">
         <div className="container-luxury">
           <div className="text-center mb-16">
             <h1 className="text-display text-4xl md:text-5xl font-bold mb-6 text-gradient-luxury">
@@ -65,7 +84,7 @@ const Products = () => {
           <div className="flex flex-col gap-4 mb-8 sm:mb-12">
             {/* Category Filter */}
             <div className="w-full overflow-x-auto">
-              <Tabs value={selectedCategory} onValueChange={(value) => setSelectedCategory(value as ProductCategory | "All")}>
+              <Tabs value={selectedCategory} onValueChange={(value) => setSelectedCategory(value)}>
                 <TabsList className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 w-full min-w-max">
                   {categories.map((category) => (
                     <TabsTrigger 
@@ -75,9 +94,11 @@ const Products = () => {
                     >
                       <span className="hidden sm:inline">{category}</span>
                       <span className="sm:hidden">{category.length > 8 ? category.substring(0, 8) + "..." : category}</span>
-                      <Badge variant="secondary" className="ml-1 sm:ml-2 text-xs hidden sm:inline-flex">
-                        {categoryCount(category)}
-                      </Badge>
+                      {!loading && (
+                        <Badge variant="secondary" className="ml-1 sm:ml-2 text-xs hidden sm:inline-flex">
+                          {categoryCount(category)}
+                        </Badge>
+                      )}
                     </TabsTrigger>
                   ))}
                 </TabsList>
@@ -104,7 +125,11 @@ const Products = () => {
           </div>
 
           {/* Products Grid */}
-          {filteredProducts.length > 0 ? (
+          {loading ? (
+            <div className="text-center py-16">
+              <p className="text-muted-foreground text-lg">Loading products...</p>
+            </div>
+          ) : filteredProducts.length > 0 ? (
             <div className={`grid gap-4 sm:gap-6 lg:gap-8 ${
               viewMode === "grid" 
                 ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" 
@@ -129,7 +154,7 @@ const Products = () => {
           )}
 
           {/* Featured Products Section */}
-          {selectedCategory === "All" && (
+          {!loading && selectedCategory === "All" && products.filter(p => p.featured).length > 0 && (
             <div className="mt-20">
               <div className="card-elegant p-8 text-center">
                 <h3 className="text-display text-2xl font-bold mb-4 text-gradient-luxury">
@@ -148,6 +173,9 @@ const Products = () => {
           )}
         </div>
       </section>
+      
+      <Footer />
+      <WhatsAppFloat />
     </div>
   );
 };
